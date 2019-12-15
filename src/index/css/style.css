@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  box-sizing: border-box; }
+
+body {
+  background: #f2f2f2;
+  height: 1000px; }
+
+header {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 5vw;
+  background: #fff;
+  border-bottom: 0.01vw solid black;
+  padding: 0 7vw;
+  position: fixed; }
+  header .logo {
+    height: 4vw; }
+  header nav {
+    margin-left: 3vw;
+    word-spacing: 1.5vw;
+    text-transform: uppercase;
+    font-size: 0.9vw; }
+    header nav li {
+      display: inline; }
+      header nav li a {
+        text-decoration: none;
+        color: black;
+        padding-bottom: 1.7vw; }
+        header nav li a:hover {
+          border-bottom: 0.3vw solid black; }
+      header nav li:hover div {
+        visibility: visible; }
+      header nav li div {
+        width: 100%;
+        display: flex;
+        padding: 1vw 7vw;
+        background: #fff;
+        word-spacing: normal;
+        position: absolute;
+        top: 5vw;
+        left: 0;
+        visibility: hidden;
+        transition: visibility 0s 0.4s; }
+        header nav li div li {
+          text-transform: none;
+          width: 15vw;
+          line-height: 2.2vw;
+          border-radius: 0.3vw;
+          padding-left: 0.7vw;
+          display: block; }
+          header nav li div li:hover {
+            background: #e4e3e3;
+            cursor: pointer; }
+        header nav li div span {
+          font-weight: bold; }
+  header div {
+    position: absolute;
+    right: 7vw; }
+    header div img {
+      height: 3.3vw;
+      border-radius: 0.3vw; }
+      header div img:hover {
+        background: #e4e3e3;
+        cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */

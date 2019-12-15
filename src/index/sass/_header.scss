@@ -1,0 +1,73 @@
+header{
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	height: 5vw;
+	background: #fff;
+	border-bottom: 0.01vw solid black;
+	padding: 0 7vw;
+	position: fixed;
+	.logo{
+		height: 4vw;
+	}
+	nav{
+		margin-left: 3vw;
+		word-spacing: 1.5vw;
+		text-transform: uppercase;
+		font-size: 0.9vw;
+		li{
+			display: inline;
+			a{
+				text-decoration: none;
+				color: black;
+				padding-bottom: 1.7vw;
+				&:hover{
+					border-bottom: 0.3vw solid black;
+				}
+			}
+			&:hover div{
+						visibility: visible;	
+			}
+			div{
+				width: 100%;
+				display: flex;
+				padding: 1vw 7vw;
+				background: #fff;
+				word-spacing: normal;
+				position: absolute;
+				top: 5vw;
+				left: 0;
+				visibility: hidden;
+				transition: visibility 0s 0.4s;
+				li{
+					text-transform: none;
+					width: 15vw;
+					line-height: 2.2vw;
+					border-radius: 0.3vw;
+					padding-left: 0.7vw;
+					display: block;
+					&:hover{
+						background: #e4e3e3;
+						cursor: pointer;
+					}
+				}
+				span{
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	div{
+		position: absolute;
+		right: 7vw;
+		img{
+			height: 3.3vw;
+			border-radius: 0.3vw;
+			&:hover{
+				background: #e4e3e3;
+				cursor: pointer;
+			}
+		}
+	}
+}
