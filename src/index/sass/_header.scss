@@ -5,9 +5,10 @@ header{
 	align-items: center;
 	height: 5vw;
 	background: #fff;
-	border-bottom: 0.01vw solid black;
+	border-bottom: 0.01vw solid #dddcdc;
 	padding: 0 7vw;
 	position: fixed;
+	z-index: 10;
 	.logo{
 		height: 4vw;
 	}

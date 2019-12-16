@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 
-export default class Header extends React.Component{
+export default class Header extends Component{
 	constructor(props){
 		super(props);
+		this.state={}
 	}
 	
 	render(){
 	return <header>
-		<img src="../src/index/img/logo.svg" alt="logo" className="logo"/>
+		<img src="../src/index/components/header/img/logo.svg" alt="logo" className="logo"/>
 		<nav>
 			<ul>
 				<li> <a href="#">Новинки</a> </li>
@@ -220,9 +221,9 @@ export default class Header extends React.Component{
 			</ul>
 		</nav>
 		<div>
-			<img src="../src/index/img/bag.svg" alt=""/>
-			<img src="../src/index/img/search.svg" alt=""/>
-			<img src="../src/index/img/profile.svg" alt=""/>
+			<img src="../src/index/components/header/img/bag.svg" alt=""/>
+			<img src="../src/index/components/header/img/search.svg" alt=""/>
+			<img src="../src/index/components/header/img/profile.svg" alt=""/>
 		</div>
 		</header>
 	}

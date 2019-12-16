@@ -8,6 +8,12 @@ body {
   background: #f2f2f2;
   height: 1000px; }
 
+.one_row {
+  padding: 8vw 7vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between; }
+
 header {
   width: 100%;
   display: flex;
@@ -15,9 +21,10 @@ header {
   align-items: center;
   height: 5vw;
   background: #fff;
-  border-bottom: 0.01vw solid black;
+  border-bottom: 0.01vw solid #dddcdc;
   padding: 0 7vw;
-  position: fixed; }
+  position: fixed;
+  z-index: 10; }
   header .logo {
     height: 4vw; }
   header nav {
@@ -67,5 +74,154 @@ header {
       header div img:hover {
         background: #e4e3e3;
         cursor: pointer; }
+
+.carousel {
+  position: relative;
+  height: 38vw;
+  overflow: hidden;
+  cursor: pointer; }
+  .carousel li {
+    position: absolute;
+    list-style-type: none; }
+  .carousel .next, .carousel .prev {
+    position: absolute;
+    top: 45%;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 3vw; }
+    .carousel .next:hover, .carousel .prev:hover {
+      background: rgba(0, 0, 0, 0.5); }
+    .carousel .next img, .carousel .prev img {
+      width: 3vw;
+      height: 3vw; }
+  .carousel .prev {
+    left: 1vw; }
+  .carousel .next {
+    right: 1vw; }
+    .carousel .next img {
+      transform: scaleX(-1); }
+  .carousel .textBlock {
+    position: absolute;
+    top: 1.5vw;
+    left: 1.5vw;
+    z-index: 1;
+    color: #fff;
+    background-color: rgba(142, 140, 140, 0.7);
+    border-radius: 0.3vw;
+    width: 13vw;
+    height: 2vw;
+    line-height: 2vw;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8vw; }
+    .carousel .textBlock:hover {
+      background-color: rgba(142, 140, 140, 0.8); }
+  .carousel .textSlide {
+    position: absolute;
+    bottom: 1.5vw;
+    left: 1.5vw;
+    color: #fff;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    text-shadow: 0.1vw 0.1vw 0.2vw black;
+    font-weight: bold; }
+
+.min {
+  width: 35vw; }
+  .min img {
+    width: 35vw;
+    height: 38vw; }
+  .min .one {
+    left: 0; }
+  .min .two {
+    left: 35vw; }
+  .min .three {
+    left: 70vw; }
+  .min .four {
+    left: 105vw; }
+  .min .five {
+    left: 140vw; }
+  .min .one_next {
+    animation: MinNextGone 0.5s;
+    left: 140vw; }
+  .min .two_next {
+    animation: MinNextCome 0.5s;
+    left: 0; }
+@keyframes MinNextGone {
+  from {
+    left: 0; }
+  to {
+    left: -35vw; } }
+@keyframes MinNextCome {
+  from {
+    left: 35vw; }
+  to {
+    left: 0; } }
+  .min .one_prev {
+    animation: MinPrevGone 0.5s;
+    left: 35vw; }
+  .min .two_prev {
+    animation: MinPrevCome 0.5s;
+    left: 0; }
+@keyframes MinPrevGone {
+  from {
+    left: 0; }
+  to {
+    left: 35vw; } }
+@keyframes MinPrevCome {
+  from {
+    left: -35vw; }
+  to {
+    left: 0; } }
+.max {
+  width: 49vw; }
+  .max img {
+    width: 49vw;
+    height: 38vw; }
+  .max .one {
+    left: 0; }
+  .max .two {
+    left: 49vw; }
+  .max .three {
+    left: 98vw; }
+  .max .four {
+    left: 147vw; }
+  .max .five {
+    left: 196vw; }
+  .max .one_next {
+    animation: MaxNextGone 0.5s;
+    left: 196vw; }
+  .max .two_next {
+    animation: MaxNextCome 0.5s;
+    left: 0; }
+@keyframes MaxNextGone {
+  from {
+    left: 0; }
+  to {
+    left: -49vw; } }
+@keyframes MaxNextCome {
+  from {
+    left: 49vw; }
+  to {
+    left: 0; } }
+  .max .one_prev {
+    animation: MaxPrevGone 0.5s;
+    left: 49vw; }
+  .max .two_prev {
+    animation: MaxPrevCome 0.5s;
+    left: 0; }
+@keyframes MaxPrevGone {
+  from {
+    left: 0; }
+  to {
+    left: 49vw; } }
+@keyframes MaxPrevCome {
+  from {
+    left: -49vw; }
+  to {
+    left: 0; } }
 
 /*# sourceMappingURL=style.css.map */

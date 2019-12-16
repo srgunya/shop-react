@@ -1,0 +1,175 @@
+.carousel{
+	position: relative;
+	height: 38vw;
+	overflow: hidden;
+	cursor: pointer;
+	li{
+		position: absolute;
+		list-style-type: none;
+	}
+	.next, .prev{
+		position: absolute;
+		top: 45%;
+		width: 3vw;
+		height: 3vw;
+		border-radius: 50%;
+		background: rgba(0,0,0,.3);
+		text-align: center;
+		line-height: 3vw;
+		&:hover{
+			 background: rgba(0,0,0,.5);
+		}
+		img{
+			width: 3vw;
+			height: 3vw;
+			
+		}
+	}
+	.prev{
+		left: 1vw;
+	}
+	.next{
+		right: 1vw;
+		img{
+			transform: scaleX(-1);
+		}
+	}
+	.textBlock{
+		position: absolute;
+		top: 1.5vw;
+		left: 1.5vw;
+		z-index: 1;
+		color: #fff;
+		background-color: rgba(142, 140, 140, 0.7);
+		border-radius: 0.3vw;
+		width: 13vw;
+		height: 2vw;
+		line-height: 2vw;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 0.8vw;
+		&:hover{
+			background-color: rgba(142, 140, 140, 0.8);
+		}
+	}
+	.textSlide{
+		position: absolute;
+		bottom: 1.5vw;
+		left: 1.5vw;
+		color: #fff;
+		font-size: 1.5vw;
+		text-transform: uppercase;
+		text-shadow: 0.1vw 0.1vw 0.2vw black;
+		font-weight: bold;
+	}
+}
+
+.min{
+		width: 35vw;
+	img{
+		width: 35vw;
+		height: 38vw;
+	}
+	.one{
+		left: 0;
+	}
+	.two{
+		left: 35vw;
+	}
+	.three{
+		left: 35*2vw;
+	}
+	.four{
+		left: 35*3vw;
+	}
+	.five{
+		left: 35*4vw;
+	}
+	.one_next{
+		animation: MinNextGone 0.5s;
+		left: 35*4vw;
+	}
+	.two_next{
+		animation: MinNextCome 0.5s;
+		left: 0;
+	}
+	@keyframes MinNextGone {
+		from {left: 0;}
+		to {left: -35vw;}
+	}
+	@keyframes MinNextCome {
+		from {left: 35vw;}
+		to {left: 0;}
+	}
+	.one_prev{
+		animation: MinPrevGone 0.5s;
+		left: 35vw;
+	}
+	.two_prev{
+		animation: MinPrevCome 0.5s;
+		left: 0;
+	}
+	@keyframes MinPrevGone {
+		from {left: 0;}
+		to {left: 35vw;}
+	}
+	@keyframes MinPrevCome {
+		from {left: -35vw;}
+		to {left: 0;}
+	}
+	}
+
+.max{
+		width: 49vw;
+	img{
+		width: 49vw;
+		height: 38vw;
+	}
+	.one{
+		left: 0;
+	}
+	.two{
+		left: 49vw;
+	}
+	.three{
+		left: 49*2vw;
+	}
+	.four{
+		left: 49*3vw;
+	}
+	.five{
+		left: 49*4vw;
+	}
+	.one_next{
+		animation: MaxNextGone 0.5s;
+		left: 49*4vw;
+	}
+	.two_next{
+		animation: MaxNextCome 0.5s;
+		left: 0;
+	}
+	@keyframes MaxNextGone {
+		from {left: 0;}
+		to {left: -49vw;}
+	}
+	@keyframes MaxNextCome {
+		from {left: 49vw;}
+		to {left: 0;}
+	}
+	.one_prev{
+		animation: MaxPrevGone 0.5s;
+		left: 49vw;
+	}
+	.two_prev{
+		animation: MaxPrevCome 0.5s;
+		left: 0;
+	}
+	@keyframes MaxPrevGone {
+		from {left: 0;}
+		to {left: 49vw;}
+	}
+	@keyframes MaxPrevCome {
+		from {left: -49vw;}
+		to {left: 0;}
+	}
+	}
