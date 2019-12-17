@@ -6,6 +6,7 @@
 	li{
 		position: absolute;
 		list-style-type: none;
+		width: 100%;
 	}
 	.next, .prev{
 		position: absolute;
@@ -22,7 +23,6 @@
 		img{
 			width: 3vw;
 			height: 3vw;
-			
 		}
 	}
 	.prev{
@@ -172,4 +172,63 @@
 		from {left: -49vw;}
 		to {left: 0;}
 	}
+}
+
+	.short{
+		width: 100%;
+		height: 25vw;
+		margin: 0 auto;
+		img{
+			width: 100%;
+			height: 25vw;
+		}
+		.textSlide{
+			right: 5vw;
+			top: 5vw;
+			left: auto;
+			text-align: center;
+			font-size: 1.6vw;
+		}
+		.stone{
+			right: 8vw;
+			font-size: 2vw;
+		}
+		.one{
+			left: 0;
+		}
+		.two{
+			left: 100%;
+		}
+		.one_next{
+		animation: NextGone 0.5s;
+		left: 100%;
+		}
+		.two_next{
+			animation: NextCome 0.5s;
+			left: 0;
+		}
+		@keyframes NextGone {
+			from {left: 0;}
+			to {left: -100%;}
+		}
+		@keyframes NextCome {
+			from {left: 100%;}
+			to {left: 0;}
+		}
+		.one_prev{
+			animation: PrevGone 0.5s;
+			left: 100%;
+		}
+		.two_prev{
+			animation: PrevCome 0.5s;
+			left: 0;
+		}
+		@keyframes PrevGone {
+			from {left: 0;}
+			to {left: 100%;}
+		}
+		@keyframes PrevCome {
+			from {left: -100%;}
+			to {left: 0;}
+		}
 	}

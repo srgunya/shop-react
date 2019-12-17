@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from './header/header';
-import Slider from './slider/slider';
+import LongSlider from './slider/long slider/long_slider';
+import ShortSlider from './slider/short slider/short_slider';
 
 export default class App extends React.Component{
 	constructor(props){
@@ -12,8 +13,11 @@ export default class App extends React.Component{
 	return <div>
 		<Header />
 		<div className="one_row">
-		<Slider data={this.props.minData} className="carousel min" title="Актуальные категории" text={this.props.minText}/>
-		<Slider data={this.props.maxData} className="carousel max" title="Новые поступления" text={this.props.maxText}/>
+			<LongSlider data={this.props.minData} className="carousel min" title="Актуальные категории" text={this.props.minText}/>
+			<LongSlider data={this.props.maxData} className="carousel max" title="Новые поступления" text={this.props.maxText}/>
+		</div>
+		<div className="two_row">
+			<ShortSlider data={this.props.shortData} />
 		</div>
 		</div>
 	}

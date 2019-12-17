@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 
-export default class Slider extends Component{
+export default class LongSlider extends Component{
 	constructor(props){
 		super(props);
 		this.state = {
@@ -18,6 +18,7 @@ export default class Slider extends Component{
 	}
 	
 	next(){
+		event.preventDefault();
 			if(this.state.indexNext == 0){
 				this.setState({indexNext : 1, indexPrev : 4, one : 'one_next', two : 'two_next', three : 'two', four : 'three', five : 'four',})
 			} else if(this.state.indexNext == 1){
@@ -32,6 +33,7 @@ export default class Slider extends Component{
 	}
 	
 	prev(){
+		event.preventDefault();
 			if(this.state.indexPrev == 0){
 				this.setState({indexNext : 4, indexPrev : 1, one : 'one_prev', two : 'three', three : 'four', four : 'five', five : 'two_prev',})
 			} else if(this.state.indexPrev == 1){
@@ -73,8 +75,8 @@ export default class Slider extends Component{
 						<div className="textSlide">{this.props.text[4]}</div>
 					</li>
 				</ul>
-					<a href="#" className="next" onClick={this.next}><img src="../src/index/components/slider/img/next.svg" alt=""/></a>
-					<a href="#" className="prev" onClick={this.prev}><img src="../src/index/components/slider/img/next.svg" alt=""/></a>
+					<a href="#" className="next" onClick={this.next}><img src="../src/index/components/slider/long slider/img/next.svg" alt=""/></a>
+					<a href="#" className="prev" onClick={this.prev}><img src="../src/index/components/slider/long slider/img/next.svg" alt=""/></a>
 			</div>
 	}
 }

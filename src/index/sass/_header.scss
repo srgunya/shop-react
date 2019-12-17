@@ -23,8 +23,10 @@ header{
 				text-decoration: none;
 				color: black;
 				padding-bottom: 1.7vw;
+				border-bottom: 0.3vw solid rgba(0,0,0,.0);
+				transition: border 0.2s;
 				&:hover{
-					border-bottom: 0.3vw solid black;
+					border-bottom: 0.3vw solid rgba(0,0,0,1);
 				}
 			}
 			&:hover div{
