@@ -6,7 +6,6 @@
 }
 body{
 	background: #f2f2f2;
-	height: 2000px;
 }
 .one_row{
 	padding: 8vw 7vw 1vw;
@@ -15,5 +14,11 @@ body{
 	justify-content: space-between;
 }
 .two_row{
+	padding: 0 7vw 1vw;
+}
+.three_row{
 	padding: 0 7vw;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
 }

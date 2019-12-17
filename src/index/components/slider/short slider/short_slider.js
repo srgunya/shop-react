@@ -38,12 +38,22 @@ export default class ShortSlider extends Component{
 	return <div className="carousel short">
 				<ul>
 					<li className={this.state.one}>
-						<img src={this.props.data[0].src} alt=""/>
-						<div className="textSlide stone">Новая коллекция Stone Island <br/> уже на сайте</div>
+						<a href="#" onClick={function(){event.preventDefault()}}>
+							<img src={this.props.data[0].src} alt=""/>
+							<div className="textSlide">
+								<h1>Stone Island</h1>
+								<p>Осенне-зимние новинки с передовыми материалами и знаковым стилем</p>
+							</div>
+						</a>	
 					</li>
 					<li className={this.state.two}>
-						<img src={this.props.data[1].src} alt=""/>
-						<div className="textSlide">Вещи от Polo Ralph Lauren <br/> отличный подарок на новый год </div>
+						<a href="#" onClick={function(){event.preventDefault()}}>
+							<img src={this.props.data[1].src} alt=""/>
+							<div className="textSlide polo">
+								<h1>Polo Ralph Lauren</h1>
+								<p>Неотъемлемые символы американского стиля в новой коллекции</p>
+							</div>
+						</a>
 					</li>
 				</ul>
 					<a href="#" className="next" onClick={this.next}><img src="../src/index/components/slider/long slider/img/next.svg" alt=""/></a>

@@ -11,211 +11,211 @@ export default class Header extends Component{
 		<img src="../src/index/components/header/img/logo.svg" alt="logo" className="logo"/>
 		<nav>
 			<ul>
-				<li> <a href="#">Новинки</a> </li>
-				<li> <a href="#">Бренды</a>
+				<li> <a href="#" onClick={function(){event.preventDefault()}}>Новинки</a> </li>
+				<li> <a href="#" onClick={function(){event.preventDefault()}}>Бренды</a>
 					<div>
 						<ul>
-							<li>adidas Originals</li>
-							<li>Alpha Industries</li>
-							<li>Arctic Explorer</li>
-							<li>ASICS</li>
-							<li>Barbour</li>
-							<li>Billionaire Boys Club</li>
-							<li>C.P. Company</li>
-							<li>Canada Goose</li>
-							<li>Carhartt WIP</li>
-							<li>Casio</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>adidas Originals</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Alpha Industries</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Arctic Explorer</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>ASICS</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Barbour</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Billionaire Boys Club</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>C.P. Company</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Canada Goose</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Carhartt WIP</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Casio</a></li>
 						</ul>
 						<ul>
-							<li>Champion</li>
-							<li>Common Project</li>
-							<li>Dr. Martens</li>
-							<li>Edwin</li>
-							<li>Ellesse</li>
-							<li>Fear of God</li>
-							<li>Fjallraven</li>
-							<li>Fred Perry</li>
-							<li>Golden Goose</li>
-							<li>Helly Hansen</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Champion</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Common Project</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Dr. Martens</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Edwin</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Ellesse</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Fear of God</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Fjallraven</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Fred Perry</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Golden Goose</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Helly Hansen</a></li>
 						</ul>
 						<ul>
-							<li>Helmut Lang</li>
-							<li>Jordan</li>
-							<li>JW Anderson</li>
-							<li>Lacoste</li>
-							<li>Lyle & Scott</li>
-							<li>M+RC Noir</li>
-							<li>Maison Margiela</li>
-							<li>MArcelo Burlon</li>
-							<li>Master-piece</li>
-							<li>MCQ</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Helmut Lang</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Jordan</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>JW Anderson</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Lacoste</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Lyle & Scott</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>M+RC Noir</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Maison Margiela</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>MArcelo Burlon</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Master-piece</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>MCQ</a></li>
 						</ul>
 						<ul>
-							<li>Medicom Toy</li>
-							<li>Nanamica</li>
-							<li>Napapijri</li>
-							<li>New Balance</li>
-							<li>Nike</li>
-							<li>Norse Project</li>
-							<li>Polo Ralph Lauren</li>
-							<li>Premiata</li>
-							<li>Puma</li>
-							<li>Reebok</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Medicom Toy</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Nanamica</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Napapijri</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>New Balance</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Nike</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Norse Project</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Polo Ralph Lauren</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Premiata</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Puma</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Reebok</a></li>
 						</ul>
 						<ul>
-							<li>Rick Owens</li>
-							<li>Ripndip</li>
-							<li>Saucony</li>
-							<li>Stone Island</li>
-							<li>Stussy</li>
-							<li>The North Face</li>
-							<li>Tommy Jeans</li>
-							<li>Weekend Offender</li>
-							<li>Y-3</li>
-							<li><span>Показать все</span></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Rick Owens</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Ripndip</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Saucony</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Stone Island</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Stussy</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>The North Face</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Tommy Jeans</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Weekend Offender</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Y-3</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Показать все</span></a></li>
 						</ul>
 					</div></li>
-				<li> <a href="#">Мужское</a>
+				<li> <a href="#" onClick={function(){event.preventDefault()}}>Мужское</a>
 					<div>
 						<ul>
-							<li><span>Обувь</span></li>
-							<li>Осенняя</li>
-							<li>Кросовки</li>
-							<li>Ботинки</li>
-							<li>Кеды</li>
-							<li>Сланцы</li>
-							<li>Sneakers</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Обувь</span></a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Осенняя</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Кросовки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Ботинки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Кеды</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Сланцы</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Sneakers</a></li>
 						</ul>
 
 						<ul>
-							<li><span>Верхняя Одежда</span></li>
-							<li>Все куртки</li>
-							<li>Осенние</li>
-							<li>Парки</li>
-							<li>Анораки</li>
-							<li>Ветровки</li>
-							<li>Аляски</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Верхняя Одежда</span></a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Все куртки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Осенние</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Парки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Анораки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Ветровки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Аляски</a></li>
 						</ul>
 
 						<ul>
-							<li><span>Одежда</span></li>
-							<li>Свитера</li>
-							<li>Толстовки</li>
-							<li>Рубашки</li>
-							<li>Лонгсливы</li>
-							<li>Поло</li>
-							<li>Футболки</li>
-							<li>Джинсы</li>
-							<li>Брюки</li>
-							<li>Шорты</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Одежда</span></a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Свитера</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Толстовки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Рубашки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Лонгсливы</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Поло</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Футболки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Джинсы</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Брюки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Шорты</a></li>
 						</ul>
 					</div></li>
-				<li> <a href="#">Женское</a>
+				<li> <a href="#" onClick={function(){event.preventDefault()}}>Женское</a>
 					<div>
 						<ul>
-							<li><span>Обувь</span></li>
-							<li>Осенняя</li>
-							<li>Кросовки</li>
-							<li>Ботинки</li>
-							<li>Кеды</li>
-							<li>Сланцы</li>
-							<li>Sneakers</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Обувь</span></a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Осенняя</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Кросовки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Ботинки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Кеды</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Сланцы</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Sneakers</a></li>
 						</ul>
 						<ul>
-							<li><span>Верхняя Одежда</span></li>
-							<li>Все куртки</li>
-							<li>Осенние</li>
-							<li>Пуховики</li>
-							<li>Ветровки</li>
-							<li>Бомберы</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Верхняя Одежда</span></a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Все куртки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Осенние</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Пуховики</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Ветровки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Бомберы</a></li>
 						</ul>
 						<ul>
-							<li><span>Одежда</span></li>
-							<li>Свитера</li>
-							<li>Толстовки</li>
-							<li>Олимпийки</li>
-							<li>Платья</li>
-							<li>Рубашки</li>
-							<li>Лонгсливы</li>
-							<li>Поло</li>
-							<li>Футболки</li>
-							<li>Брюки</li>
-							<li>Юбки</li>
-							<li>Шорты</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Одежда</span></a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Свитера</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Толстовки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Олимпийки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Платья</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Рубашки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Лонгсливы</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Поло</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Футболки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Брюки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Юбки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Шорты</a></li>
 						</ul>
 					</div></li>
-				<li> <a href="#">Аксессуары</a>
+				<li> <a href="#" onClick={function(){event.preventDefault()}}>Аксессуары</a>
 					<div>
 						<ul>
-							<li><span>Зимние</span></li>
-							<li>Шарфы</li>
-							<li>Шапки</li>
-							<li>Перчатки</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Зимние</span></a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Шарфы</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Шапки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Перчатки</a></li>
 						</ul>
 						<ul>
-							<li><span>Прочее</span></li>
-							<li>Игрушки</li>
-							<li>Наручные часы</li>
-							<li>Гаджеты</li>
-							<li>Очки</li>
-							<li>Кошельки</li>
-							<li>Ремни</li>
-							<li>Кепки</li>
-							<li>Панамы</li>
-							<li>Нижнее белье</li>
-							<li>Носки</li>
-							<li>Подарочные сертификаты</li>
-							<li>Уход за обувью</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Прочее</span></a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Игрушки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Наручные часы</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Гаджеты</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Очки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Кошельки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Ремни</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Кепки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Панамы</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Нижнее белье</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Носки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Подарочные сертификаты</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Уход за обувью</a></li>
 						</ul>
 						<ul>
-							<li><span>Рюкзаки и сумки</span></li>
-							<li>Рюкзаки</li>
-							<li>Сумки</li>
-							<li>Сумки на пояс</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Рюкзаки и сумки</span></a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Рюкзаки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Сумки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Сумки на пояс</a></li>
 						</ul>
 						<ul>
-							<li><span>Красота</span></li>
-							<li>Для лица</li>
-							<li>Для тела</li>
-							<li>Для лица</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Красота</span></a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Для лица</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Для тела</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Для лица</a></li>
 						</ul>
 					</div></li>
-				<li> <a href="#">Скидки</a>
+				<li> <a href="#" onClick={function(){event.preventDefault()}}>Скидки</a>
 					<div>
 						<ul>
-							<li><span>Обувь</span></li>
-							<li>Кросовки</li>
-							<li>Ботинки</li>
-							<li>Кеды</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Обувь</span></a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Кросовки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Ботинки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Кеды</a></li>
 						</ul>
 						<ul>
-							<li><span>Верхняя одежда</span></li>
-							<li>Все куртки</li>
-							<li>Бомберы</li>
-							<li>Анораки</li>
-							<li>Стеганые куртки</li>
-							<li>Джинсовые куртки</li>
-							<li>Ветровки</li>
-							<li>Плащи</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Верхняя одежда</span></a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Все куртки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Бомберы</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Анораки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Стеганые куртки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Джинсовые куртки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Ветровки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Плащи</a></li>
 						</ul>
 						<ul>
-							<li><span>Одежда</span></li>
-							<li>Джинсы</li>
-							<li>Поло</li>
-							<li>Свитера</li>
-							<li>Футболки</li>
-							<li>Шорты</li>
-							<li>Толстовки</li>
-							<li>Рубашки</li>
-							<li>Брюки</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Одежда</span></a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Джинсы</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Поло</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Свитера</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Футболки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Шорты</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Толстовки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Рубашки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Брюки</a></li>
 						</ul>
 						<ul>
-							<li><span>Аксессуары</span></li>
-							<li>Кепки</li>
-							<li>Нижнее белье</li>
-							<li>Носки</li>
-							<li>Сумки</li>
-							<li>Рюкзаки</li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Аксессуары</span></a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Кепки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Нижнее белье</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Носки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Сумки</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Рюкзаки</a></li>
 						</ul>
 					</div></li>	
 			</ul>

@@ -55,24 +55,34 @@ export default class LongSlider extends Component{
 				<div className="textBlock">{this.props.title}</div>
 				<ul>
 					<li className={this.state.one}>
-						<img src={this.props.data[0].src} alt=""/>
-						<div className="textSlide">{this.props.text[0]}</div>
+						<a href="#" onClick={function(){event.preventDefault()}}>
+							<img src={this.props.data[0].src} alt=""/>
+							<div className="textSlide">{this.props.text[0]}</div>
+						</a>
 					</li>
 					<li className={this.state.two}>
-						<img src={this.props.data[1].src} alt=""/>
-						<div className="textSlide">{this.props.text[1]}</div>
+						<a href="#" onClick={function(){event.preventDefault()}}>
+							<img src={this.props.data[1].src} alt=""/>
+							<div className="textSlide">{this.props.text[1]}</div>
+						</a>
 					</li>
 					<li className={this.state.three}>
-						<img src={this.props.data[2].src} alt=""/>
-						<div className="textSlide">{this.props.text[2]}</div>
+						<a href="#" onClick={function(){event.preventDefault()}}>
+							<img src={this.props.data[2].src} alt=""/>
+							<div className="textSlide">{this.props.text[2]}</div>
+						</a>
 					</li>
 					<li className={this.state.four}>
-						<img src={this.props.data[3].src} alt=""/>
-						<div className="textSlide">{this.props.text[3]}</div>
+						<a href="#" onClick={function(){event.preventDefault()}}>
+							<img src={this.props.data[3].src} alt=""/>
+							<div className="textSlide">{this.props.text[3]}</div>
+						</a>
 					</li>
 					<li className={this.state.five}>
-						<img src={this.props.data[4].src} alt=""/>
-						<div className="textSlide">{this.props.text[4]}</div>
+						<a href="#" onClick={function(){event.preventDefault()}}>
+							<img src={this.props.data[4].src} alt=""/>
+							<div className="textSlide">{this.props.text[4]}</div>
+						</a>
 					</li>
 				</ul>
 					<a href="#" className="next" onClick={this.next}><img src="../src/index/components/slider/long slider/img/next.svg" alt=""/></a>
