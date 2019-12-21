@@ -3,16 +3,19 @@ import React, { Component } from "react";
 export default class Header extends Component{
 	constructor(props){
 		super(props);
-		this.state={}
+		this.state = {}
 	}
 	
 	render(){
 	return <header>
-		<img src="../src/index/components/header/img/logo.svg" alt="logo" className="logo"/>
+		<a href="./index.html" className="logo"><img src="../src/index/components/header/img/logo.svg" alt="logo"/></a>
 		<nav>
-			<ul>
-				<li> <a href="#" onClick={function(){event.preventDefault()}}>Новинки</a> </li>
-				<li> <a href="#" onClick={function(){event.preventDefault()}}>Бренды</a>
+			<ul onMouseEnter={this.hover}>
+				<li> 
+					<a href="#" onClick={function(){event.preventDefault()}}>Новинки</a> 
+				</li>
+				<li onMouseEnter={this.props.hover} onMouseLeave={this.props.hide}> 
+					<a href="#" onClick={function(){event.preventDefault()}}>Бренды</a>
 					<div>
 						<ul>
 							<li><a href="#" onClick={function(){event.preventDefault()}}>adidas Originals</a></li>
@@ -46,7 +49,7 @@ export default class Header extends Component{
 							<li><a href="#" onClick={function(){event.preventDefault()}}>Lyle & Scott</a></li>
 							<li><a href="#" onClick={function(){event.preventDefault()}}>M+RC Noir</a></li>
 							<li><a href="#" onClick={function(){event.preventDefault()}}>Maison Margiela</a></li>
-							<li><a href="#" onClick={function(){event.preventDefault()}}>MArcelo Burlon</a></li>
+							<li><a href="#" onClick={function(){event.preventDefault()}}>Marcelo Burlon</a></li>
 							<li><a href="#" onClick={function(){event.preventDefault()}}>Master-piece</a></li>
 							<li><a href="#" onClick={function(){event.preventDefault()}}>MCQ</a></li>
 						</ul>
@@ -74,8 +77,10 @@ export default class Header extends Component{
 							<li><a href="#" onClick={function(){event.preventDefault()}}>Y-3</a></li>
 							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Показать все</span></a></li>
 						</ul>
-					</div></li>
-				<li> <a href="#" onClick={function(){event.preventDefault()}}>Мужское</a>
+					</div>	
+				</li>
+				<li onMouseEnter={this.props.hover} onMouseLeave={this.props.hide}> 
+					<a href="#" onClick={function(){event.preventDefault()}}>Мужское</a>
 					<div>
 						<ul>
 							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Обувь</span></a></li>
@@ -109,8 +114,10 @@ export default class Header extends Component{
 							<li><a href="#" onClick={function(){event.preventDefault()}}>Брюки</a></li>
 							<li><a href="#" onClick={function(){event.preventDefault()}}>Шорты</a></li>
 						</ul>
-					</div></li>
-				<li> <a href="#" onClick={function(){event.preventDefault()}}>Женское</a>
+					</div>
+				</li>
+				<li onMouseEnter={this.props.hover} onMouseLeave={this.props.hide}> 
+					<a href="#" onClick={function(){event.preventDefault()}}>Женское</a>
 					<div>
 						<ul>
 							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Обувь</span></a></li>
@@ -143,8 +150,10 @@ export default class Header extends Component{
 							<li><a href="#" onClick={function(){event.preventDefault()}}>Юбки</a></li>
 							<li><a href="#" onClick={function(){event.preventDefault()}}>Шорты</a></li>
 						</ul>
-					</div></li>
-				<li> <a href="#" onClick={function(){event.preventDefault()}}>Аксессуары</a>
+					</div>
+				</li>
+				<li onMouseEnter={this.props.hover} onMouseLeave={this.props.hide}> 
+					<a href="#" onClick={function(){event.preventDefault()}}>Аксессуары</a>
 					<div>
 						<ul>
 							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Зимние</span></a></li>
@@ -179,8 +188,10 @@ export default class Header extends Component{
 							<li><a href="#" onClick={function(){event.preventDefault()}}>Для тела</a></li>
 							<li><a href="#" onClick={function(){event.preventDefault()}}>Для лица</a></li>
 						</ul>
-					</div></li>
-				<li> <a href="#" onClick={function(){event.preventDefault()}}>Скидки</a>
+					</div>
+				</li>
+				<li onMouseEnter={this.props.hover} onMouseLeave={this.props.hide}> 
+					<a href="#" onClick={function(){event.preventDefault()}}>Скидки</a>
 					<div>
 						<ul>
 							<li><a href="#" onClick={function(){event.preventDefault()}}><span>Обувь</span></a></li>
@@ -217,10 +228,11 @@ export default class Header extends Component{
 							<li><a href="#" onClick={function(){event.preventDefault()}}>Сумки</a></li>
 							<li><a href="#" onClick={function(){event.preventDefault()}}>Рюкзаки</a></li>
 						</ul>
-					</div></li>	
-			</ul>
+					</div>
+				</li>	
+						</ul>
 		</nav>
-		<div>
+		<div className="icon">
 			<img src="../src/index/components/header/img/bag.svg" alt=""/>
 			<img src="../src/index/components/header/img/search.svg" alt=""/>
 			<img src="../src/index/components/header/img/profile.svg" alt=""/>

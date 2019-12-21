@@ -17,11 +17,11 @@
 		width: 3vw;
 		height: 3vw;
 		border-radius: 50%;
-		background: rgba(0,0,0,.3);
+		background: rgba(0,0,0,.4);
 		text-align: center;
 		line-height: 3vw;
 		&:hover{
-			 background: rgba(0,0,0,.5);
+			 background: rgba(0,0,0,.6);
 		}
 		img{
 			width: 3vw;
@@ -43,16 +43,17 @@
 		left: 1.5vw;
 		z-index: 1;
 		color: #fff;
-		background-color: rgba(142, 140, 140, 0.7);
-		border-radius: 0.3vw;
+		background-color: rgba(62,78,97,.64);
+		border-radius: 0.15vw;
 		padding: 0 2vw;
 		height: 2vw;
 		line-height: 2vw;
 		text-align: center;
 		text-transform: uppercase;
 		font-size: 0.8vw;
+		letter-spacing: 0.1vw;
 		&:hover{
-			background-color: rgba(142, 140, 140, 0.8);
+			background-color: rgba(62,78,97,.7);
 		}
 	}
 	.textSlide{
@@ -117,15 +118,16 @@
 	}	
 
 	.min{
-			width: 35vw;
+			width: 40%;
 			height: 38vw;
+			margin-right: 1vw;
 		img{
 			height: 38vw;
 		}
 		}
 
 	.max{
-			width: 49vw;
+			width: 60%;
 			height: 38vw;
 		img{
 			height: 38vw;

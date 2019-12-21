@@ -36,7 +36,7 @@ export default class Footer extends Component{
 			<div className="pay">
 				<h1>Способы оплаты</h1>
 				<ul>
-					<li><img src="../src/index/components/footer/img/master.png" title="MasterCard"/></li>
+					<li><img src="../src/index/components/footer/img/mastercard.png" title="MasterCard"/></li>
 					<li><img src="../src/index/components/footer/img/visa.png" title="Visa"/></li>
 					<li><img src="../src/index/components/footer/img/mir.png" title="Мир"/></li>
 				</ul>

@@ -7,12 +7,26 @@ import Footer from './footer/footer';
 export default class App extends React.Component{
 	constructor(props){
 		super(props);
-		this.state = {}
+			this.state = {
+			class : "shadow_hide"
+		}
+		this.hover = this.hover.bind(this);
+		this.hide = this.hide.bind(this);
 	}
 	
+	hover(){
+	this.setState({class : "shadow"});
+	}
+	
+	hide(){
+		this.setState({class : "shadow_hide"});
+	}
+	
+
 	render(){
 	return <div>
-		<Header />
+		<Header hover={this.hover} hide={this.hide}/>
+		<div className={this.state.class}></div>
 		<div className="one_row">
 			<LongSlider data={this.props.minData} className="carousel min" title="Актуальные категории" text={this.props.minText}/>
 			<LongSlider data={this.props.maxData} className="carousel max" title="Новые поступления" text={this.props.maxText}/>

@@ -15,7 +15,7 @@ document.body.appendChild(el);
 
 let minText = ['Аксессуары', '', 'Мужские толстовки', 'Мужские рубашки', 'Мужские куртки'];
 let maxText = ['Stone island', 'Evisu', 'M+rc noir', 'Champion', 'Medicom toy'];
-let newsText = ['Travis scott & adidas 3m', 'neighborhood & adidas run city: бег сквозь город', 'adidas yeezy boost 700 carbon blue', 'adidas & 424: Максимальный минимализм', ''];
+let newsText = ['adidas yeezy boost 700 carbon blue', 'neighborhood & adidas run city: бег сквозь город', 'Travis scott & adidas 3m', 'adidas & 424: Максимальный минимализм', ''];
 
 
 

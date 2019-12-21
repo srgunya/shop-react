@@ -6,6 +6,8 @@
 }
 body{
 	background: #f2f2f2;
+	height: 100%;
+	position: relative;
 }
 .one_row{
 	padding: 8vw 7vw 1vw;
@@ -21,4 +23,12 @@ body{
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
+}
+.shadow{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 7;
+	background: rgba(0,0,0,.5);
+	transition: all 0s 0.5s;
 }

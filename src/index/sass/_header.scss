@@ -10,27 +10,31 @@ header{
 	position: fixed;
 	z-index: 10;
 	.logo{
-		height: 4vw;
+		img{
+		height: 4vw;	
+		}
 	}
 	nav{
-		margin-left: 3vw;
+		margin-left: 1.7vw;
 		word-spacing: 1.5vw;
 		text-transform: uppercase;
-		font-size: 0.9vw;
+		font-size: 0.8vw;
+		letter-spacing: 0.1vw;
 		li{
-			display: inline;
+			display: inline-block;
 			a{
 				text-decoration: none;
-				color: black;
-				padding-bottom: 1.7vw;
-				border-bottom: 0.3vw solid rgba(0,0,0,.0);
+				color: #646464;
+				padding: 0 0.7vw 1.9vw;
+				border-bottom: 0.25vw solid rgba(0,0,0,.0);
 				transition: border 0.2s;
-				&:hover{
-					border-bottom: 0.3vw solid rgba(0,0,0,1);
-				}
 			}
 			&:hover div{
-						visibility: visible;	
+						visibility: visible;
+						transition: visibility 0s 0.5s;
+			}
+			&:hover a{
+						border-bottom: 0.25vw solid rgba(0,0,0,1);
 			}
 			div{
 				width: 100%;
@@ -42,33 +46,36 @@ header{
 				top: 5vw;
 				left: 0;
 				visibility: hidden;
-				transition: visibility 0s 0.4s;
-				li{
-					text-transform: none;
-					width: 15vw;
-					line-height: 2.2vw;
-					border-radius: 0.3vw;
-					padding-left: 0.7vw;
-					display: block;
-					margin-right: 2.5vw;
-					a{
-						border: 0;
+				transition: visibility 0s;
+					li{
+						text-transform: none;
+						width: 15vw;
+						line-height: 2.2vw;
+						border-radius: 0.3vw;
+						padding-left: 0.1vw;
+						display: block;
+						margin-right: 2.5vw;
+						letter-spacing: 0;
+						font-size: 0.9vw;
+						a{
+							border: 0!important;
+							color: black;
+							&:hover{
+								border: 0!important;
+							}
+						}
 						&:hover{
-							border: 0;
+							background: rgba(62, 78, 97, 0.2);
+							cursor: pointer;
 						}
 					}
-					&:hover{
-						background: #e4e3e3;
-						cursor: pointer;
+					span{
+						font-weight: bold;
 					}
 				}
-				span{
-					font-weight: bold;
-				}
-			}
 		}
 	}
-	div{
+	.icon{
 		position: absolute;
 		right: 7vw;
 		img{
