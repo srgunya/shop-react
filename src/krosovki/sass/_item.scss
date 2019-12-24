@@ -1,0 +1,17 @@
+.item{
+	text-align: center;
+	display: inline-block;
+	width: 24vw;
+	margin-bottom: 2vw;
+	&:hover{
+		outline: 1px solid #dddcdc;
+		box-shadow: 0 0 5px rgba(0,0,0,.3);
+	}
+	img{
+		width: 20vw;
+	}
+	h1{
+		font-size: 1vw;
+		margin-bottom: 1vw;
+	}
+}

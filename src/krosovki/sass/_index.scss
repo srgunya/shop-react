@@ -9,21 +9,6 @@ body{
 	height: 100%;
 	position: relative;
 }
-.one_row{
-	padding: 8vw 7vw 1vw;
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-}
-.two_row{
-	padding: 0 7vw 1vw;
-}
-.three_row{
-	padding: 0 7vw;
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-}
 .shadow{
 	position: absolute;
 	height: 100%;
@@ -31,4 +16,10 @@ body{
 	z-index: 7;
 	background: rgba(0,0,0,.5);
 	transition: all 0s 0.5s;
+}
+.cont{
+	padding: 1vw 7vw 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
 }

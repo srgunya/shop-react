@@ -8,23 +8,23 @@ export default class App extends React.Component{
 	constructor(props){
 		super(props);
 			this.state = {
-			class : "shadow_hide"
+			class : "shadow_hide",
 		}
 		this.hover = this.hover.bind(this);
 		this.hide = this.hide.bind(this);
 	}
 	
 	hover(){
-	this.setState({class : "shadow"});
+		this.setState({class : "shadow"});
 	}
 	
 	hide(){
 		this.setState({class : "shadow_hide"});
 	}
 	
-
+	
 	render(){
-	return <div>
+				return <div>
 		<Header hover={this.hover} hide={this.hide}/>
 		<div className={this.state.class}></div>
 		<div className="one_row">

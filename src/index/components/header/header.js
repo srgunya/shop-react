@@ -230,6 +230,9 @@ export default class Header extends Component{
 						</ul>
 					</div>
 				</li>	
+					<li className="sneakers">
+						<a href="./krosovki.html">Кросовки</a>
+					</li>
 						</ul>
 		</nav>
 		<div className="icon">
