@@ -17,27 +17,21 @@ export default class MenuSort extends Component{
 	return <aside className="menuSort">
 		<ul>
 		Пол
-		<li><input type="checkbox"/>Женский</li>
-		<li><input type="checkbox"/>Мужской</li>
-		<li><input type="checkbox"/>Унисекс</li>
+		<li><input type="checkbox" onClick={this.props.sort}/>Женский</li>
+		<li><input type="checkbox" onClick={this.props.sort}/>Мужской</li>
+		<li><input type="checkbox" onClick={this.props.sort}/>Унисекс</li>
 		</ul>
 		<ul>
 		Цвет
-		<li><input type="checkbox"/>Чёрный</li>
-		<li><input type="checkbox"/>Белый</li>
-		<li><input type="checkbox"/>Синий</li>
+		<li><input type="checkbox" onClick={this.props.sort}/>Чёрный</li>
+		<li><input type="checkbox" onClick={this.props.sort}/>Белый</li>
+		<li><input type="checkbox" onClick={this.props.sort}/>Синий</li>
 		</ul>
 		<ul>
 		Бренд
-		<li><input type="checkbox"/>Nike</li>
-		<li><input type="checkbox"/>Adidas</li>
-		<li><input type="checkbox"/>Yezzy</li>
-		</ul>
-		<ul>
-		Размер
-		<li><input type="checkbox"/>1</li>
-		<li><input type="checkbox"/>2</li>
-		<li><input type="checkbox"/>3</li>
+		<li><input type="checkbox" onClick={this.props.sort}/>Nike</li>
+		<li><input type="checkbox" onClick={this.props.sort}/>Adidas</li>
+		<li><input type="checkbox" onClick={this.props.sort}/>Yezzy</li>
 		</ul>
 		</aside>
 	}
