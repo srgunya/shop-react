@@ -11,7 +11,8 @@ export default class Footer extends Component{
 		<div className="one_footer">
 			<div className="phone">
 				<h1>Телефоны</h1>
-				<p>8 (800) 775-28-34 <br/> 8 (495) 544-57-70</p>
+				<p>8 (800) 775-28-34</p>
+				<p id="tuta"><a href="#" onClick={function(){event.preventDefault()}}>8 (495) 544-57-70</a></p>
 			</div>
 			<div className="social">
 				<h1>Социальные сети</h1>

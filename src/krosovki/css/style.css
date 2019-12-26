@@ -22,6 +22,8 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between; }
+  .cont .item_list {
+    width: 85%; }
 
 header {
   width: 100%;
@@ -119,7 +121,15 @@ footer {
     footer .one_footer p {
       font-weight: bold;
       font-size: 1.2vw;
-      line-height: 1.8vw; }
+      margin-bottom: 0.5vw; }
+    footer .one_footer #tuta {
+      color: #fff !important;
+      text-decoration: none !important;
+      cursor: none !important; }
+      footer .one_footer #tuta a {
+        color: #fff !important;
+        text-decoration: none !important;
+        cursor: text !important; }
     footer .one_footer .social {
       margin-left: 15vw; }
       footer .one_footer .social li {
@@ -266,26 +276,61 @@ footer {
       color: #fff; }
       .sort .sort_button .fcs:hover {
         background: #5e6364; }
+    .sort .sort_button .sort_button_right span {
+      margin: 0 0.5vw 0 0; }
     .sort .sort_button .sort_button_right button {
       width: auto;
-      padding: 0 0.5vw; }
+      padding: 0 0.5vw;
+      margin: 0 0 0 0.5vw; }
 
 .menuSort {
-  width: 45%;
+  width: 15%;
   font-size: 1vw; }
   .menuSort li {
     display: flex;
-    margin: 0.5vw 0; }
-  .menuSort input {
+    margin: 1vw 0; }
+  .menuSort .checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 1vw 0 0 1vw; }
+  .menuSort .checkbox + label {
+    position: relative;
+    padding: 0 0 0 5vw;
+    cursor: pointer; }
+  .menuSort .checkbox + label:before {
+    content: '';
+    position: absolute;
+    top: -0.25vw;
+    left: 0;
+    width: 3.5vw;
+    height: 1.7vw;
+    border-radius: 1vw;
+    background: #CDD1DA;
+    box-shadow: inset 0 0.1vw 0.2vw rgba(0, 0, 0, 0.2);
+    transition: .1s; }
+  .menuSort .checkbox + label:after {
+    content: '';
+    position: absolute;
+    top: -0.14vw;
+    left: 0.1vw;
     width: 1.5vw;
-    height: 1.5vw;
-    margin-right: 1vw; }
+    height: 1.45vw;
+    border-radius: 1vw;
+    background: #FFF;
+    box-shadow: 0 0.1vw 0.3vw rgba(0, 0, 0, 0.3);
+    transition: .1s; }
+  .menuSort .checkbox:checked + label:before {
+    background: #5e6364; }
+  .menuSort .checkbox:checked + label:after {
+    left: 1.9vw; }
 
 .item {
   text-align: center;
   display: inline-block;
   width: 24vw;
-  margin-bottom: 2vw; }
+  margin-bottom: 2vw;
+  cursor: pointer; }
   .item:hover {
     outline: 1px solid #dddcdc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }

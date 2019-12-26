@@ -10,11 +10,18 @@ export default class App extends React.Component{
 		super(props);
 			this.state = {
 			class : "shadow_hide",
-			items : this.props.data.map(item => <Item photo={item["src"]} brand={item["brand"]} />),
+			itemsOpen : this.props.data,
+			itemsExit : this.props.data.map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]}/>),
+			index : "normal",
+			qwe : '',
+					
 		}
 		this.hover = this.hover.bind(this);
 		this.hide = this.hide.bind(this);
 		this.sort = this.sort.bind(this);
+		this.sortPriceBig = this.sortPriceBig.bind(this);
+		this.sortPriceSmall = this.sortPriceSmall.bind(this);
+		this.sortPriceNormal = this.sortPriceNormal.bind(this);
 	}
 	
 	hover(){
@@ -34,17 +41,17 @@ export default class App extends React.Component{
 		//получаем ключевые слова из списков
 		for(let i = 0; i < sex.length; i++){
 			if(sex[i].children[0].checked){
-				sexWords.push(sex[i].innerText)
+				sexWords.push(sex[i].children[1].innerText)
 			}
 		}
 		for(let i = 0; i < color.length; i++){
 			if(color[i].children[0].checked){
-				colorWords.push(color[i].innerText)
+				colorWords.push(color[i].children[1].innerText)
 			}
 		}
 		for(let i = 0; i < brand.length; i++){
 			if(brand[i].children[0].checked){
-				brandWords.push(brand[i].innerText)
+				brandWords.push(brand[i].children[1].innerText)
 			}
 		}
 		//фильтруем по ключевым словам
@@ -80,8 +87,13 @@ export default class App extends React.Component{
 				if(item == b[i]) return true;
 			}
 		});
-		c = c.map(item => <Item photo={item["src"]} brand={item["brand"]} />);
-		this.setState({items : c})
+		if(this.state.index == "big"){
+			this.setState({itemsOpen : c, itemsExit : c.slice().sort((a, b) => a.price > b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)});
+		} else if (this.state.index == "small"){
+			this.setState({itemsOpen : c, itemsExit : c.slice().sort((a, b) => a.price < b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)});
+		} else if(this.state.index == "normal"){
+			this.setState({itemsOpen : c, itemsExit : c.map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)});	
+			}
 		//общие значения из первого и второго массива
 		z = brandItems.filter(function(item){
 			for(let i = 0; i < sexItems.length; i++){
@@ -94,42 +106,103 @@ export default class App extends React.Component{
 				if(item == colorItems[i]) return true;
 			}
 		})
-		
-		//каша зависимостей
+		//зависимости если фильтруем только по одному свойству
 		if(sexWords.length == 0 && colorWords.length == 0){
-				this.setState({items : brandItems.map(item => <Item photo={item["src"]} brand={item["brand"]} />)})
+		//проверка на сортировку по цене
+		if(this.state.index == "big"){
+			this.setState({itemsOpen : brandItems, itemsExit : brandItems.slice().sort((a, b) => a.price > b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})
+		} else if (this.state.index == "small"){
+			this.setState({itemsOpen : brandItems, itemsExit : brandItems.slice().sort((a, b) => a.price < b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})		   
+		} else if(this.state.index == "normal"){
+			this.setState({itemsOpen : brandItems, itemsExit : brandItems.map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})
+		}
 		} else if (colorWords.length == 0 && brandWords.length == 0){
-				this.setState({items : sexItems.map(item => <Item photo={item["src"]} brand={item["brand"]} />)})
+		//проверка на сортировку по цене
+		if(this.state.index == "big"){	   
+			this.setState({itemsOpen : sexItems, itemsExit : sexItems.slice().sort((a, b) => a.price > b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})
+		} else if (this.state.index == "small"){
+			this.setState({itemsOpen : sexItems, itemsExit : sexItems.slice().sort((a, b) => a.price < b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})
+		} else if(this.state.index == "normal")	{
+			this.setState({itemsOpen : sexItems, itemsExit : sexItems.map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})
+		}	   	   
 		} else if (sexWords.length == 0 && brandWords.length == 0){
-				this.setState({items : colorItems.map(item => <Item photo={item["src"]} brand={item["brand"]} />)})
+		//проверка на сортировку по цене
+		if(this.state.index == "big"){
+			this.setState({itemsOpen : colorItems, itemsExit : colorItems.slice().sort((a, b) => a.price > b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})
+		} else if (this.state.index == "small"){
+			this.setState({itemsOpen : colorItems, itemsExit : colorItems.slice().sort((a, b) => a.price < b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})			   
+		}	else if(this.state.index == "normal"){
+				this.setState({itemsOpen : colorItems, itemsExit : colorItems.map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})
+		}		   	   
 		};
-													  
+		//обычное состояние										  
 		if(sexWords.length == 0 && brandWords.length == 0 && colorWords.length == 0){
-				this.setState({items : this.props.data.map(item => <Item photo={item["src"]} brand={item["brand"]} />)})
+		//проверка на сортировку по цене
+		if(this.state.index == "big"){
+				this.setState({itemsOpen : this.props.data, itemsExit : this.props.data.slice().sort((a, b) => a.price > b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})
+		} else if (this.state.index == "small"){
+					this.setState({itemsOpen : this.props.data, itemsExit : this.props.data.slice().sort((a, b) => a.price < b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})
+		}	else if(this.state.index == "normal"){
+				this.setState({itemsOpen : this.props.data, itemsExit : this.props.data.map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})
+		}   
 		};
-							  
+		//нахождение общих элементов если задействованы 2 свойства				  
 		if(c.length == 0 && b.length !== 0){
-			b = b.map(item => <Item photo={item["src"]} brand={item["brand"]} />);
-			this.setState({items : b})	
-		} else if(c.length == 0 && z.length !== 0){
-			z = z.map(item => <Item photo={item["src"]} brand={item["brand"]} />);
-			this.setState({items : z})	
-		} else if(c.length == 0 && x.length !== 0){
-			x = x.map(item => <Item photo={item["src"]} brand={item["brand"]} />);
-			this.setState({items : x})
-		};
-	}
-						  
+		//проверка на сортировку по цене
+		if(this.state.index == "big"){
+			this.setState({itemsOpen : b, itemsExit : b.slice().sort((a, b) => a.price > b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})
+		} else if (this.state.index == "small"){
+			this.setState({itemsOpen : b, itemsExit : b.slice().sort((a, b) => a.price < b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})				   
+		}else if(this.state.index == "normal"){
+			this.setState({itemsOpen : b, itemsExit : b.map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})	
+		}		
 	
+		} else if(c.length == 0 && z.length !== 0){
+		//проверка на сортировку по цене
+		if(this.state.index == "big"){
+			this.setState({itemsOpen : z, itemsExit : z.slice().sort((a, b) => a.price > b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})			   
+		} else if (this.state.index == "small"){
+			this.setState({itemsOpen : z, itemsExit : z.slice().sort((a, b) => a.price < b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})	
+		} else if(this.state.index == "normal")	{
+			this.setState({itemsOpen : z, itemsExit : z.map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})	
+		}		   	   
+
+		} else if(c.length == 0 && x.length !== 0){
+		//проверка на сортировку по цене
+		if(this.state.index == "big"){
+			this.setState({itemsOpen : x, itemsExit : x.slice().sort((a, b) => a.price > b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})
+		} else if (this.state.index == "small"){
+			this.setState({itemsOpen : x, itemsExit : x.slice().sort((a, b) => a.price < b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})	
+		} else if(this.state.index == "normal") {
+			this.setState({itemsOpen : x, itemsExit : x.map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />)})
+		}			   		   
+		};
+		//если задействованы 3 свойства но общих элементов нет
+		if(sexWords.length !== 0 && brandWords.length !== 0 && colorWords.length !== 0 & c.length == 0){
+			this.setState({itemsOpen : c, itemsExit : c.map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]} />) });
+		}
+	}
+		
+	sortPriceBig(){
+		this.setState({index : "big", itemsOpen : this.state.itemsOpen, itemsExit : this.state.itemsOpen.slice().sort((a, b) => a.price > b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]}/>)});
+	}
+	sortPriceSmall(){
+		this.setState({index : "small", itemsOpen : this.state.itemsOpen, itemsExit : this.state.itemsOpen.slice().sort((a, b) => a.price < b.price ? 1 : -1).map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]}/>)});
+	}
+	sortPriceNormal(){
+		this.setState({index : "normal", itemsOpen : this.state.itemsOpen, itemsExit : this.state.itemsOpen.map(item => <Item photo={item["src"]} brand={item["brand"]} key={item["id"]} price={item["price"]}/>)})
+	}
+																											
+							
 	render(){
 				return <div>
 		<Header hover={this.hover} hide={this.hide}/>
 		<div className={this.state.class}></div>
-		<Sort />
+		<Sort sortPriceBig={this.sortPriceBig} sortPriceSmall={this.sortPriceSmall} sortPriceNormal={this.sortPriceNormal} />
 			<div className="cont">
 				<MenuSort sort={this.sort}/>
-				<div>
-				{this.state.items}
+				<div className="item_list">
+				{this.state.itemsExit}
 				</div>
 			</div>
 		<Footer />

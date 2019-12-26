@@ -10,6 +10,7 @@ export default class Item extends Component{
 	return <div className="item">
 		<img src={this.props.photo} />
 		<h1>{this.props.brand}</h1>
+		<p>Цена: {this.props.price}</p>
 		</div>
 	}
 }

@@ -14,6 +14,7 @@ export default class Sort extends Component{
 	}
 	
 	render(){
+		let tuta = this;
 	return <aside className="sort">
 		<h1>Кроссовки</h1>
 		<div className="sort_button">
@@ -25,9 +26,18 @@ export default class Sort extends Component{
 			</div>
 			<div className="sort_button_right">
 			<span>Сортировать</span>
-			<button className={this.state.rightOne} onClick={()=>this.setState({rightOne : "fcs", rightTwo : "", rightThree : "",})}>по умолчанию</button>
-			<button className={this.state.rightTwo} onClick={()=>this.setState({rightOne : "", rightTwo : "fcs", rightThree : "",})}>возврастанию цен</button>
-			<button className={this.state.rightThree} onClick={()=>this.setState({rightOne : "", rightTwo : "", rightThree : "fcs",})}>убыванию цен</button>
+			<button className={this.state.rightOne} onClick={function(){
+				tuta.props.sortPriceNormal();
+				tuta.setState({rightOne : "fcs", rightTwo : "", rightThree : "",});
+			}}>по умолчанию</button>
+			<button className={this.state.rightTwo} onClick={function(){
+				tuta.props.sortPriceBig();
+				tuta.setState({rightOne : "", rightTwo : "fcs", rightThree : "",});
+			}}>возврастанию цен</button>
+			<button className={this.state.rightThree} onClick={function(){
+				tuta.props.sortPriceSmall();
+				tuta.setState({rightOne : "", rightTwo : "", rightThree : "fcs",})
+			}}>убыванию цен</button>
 			</div>
 		</div>
 		

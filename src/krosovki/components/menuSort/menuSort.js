@@ -17,21 +17,21 @@ export default class MenuSort extends Component{
 	return <aside className="menuSort">
 		<ul>
 		Пол
-		<li><input type="checkbox" onClick={this.props.sort}/>Женский</li>
-		<li><input type="checkbox" onClick={this.props.sort}/>Мужской</li>
-		<li><input type="checkbox" onClick={this.props.sort}/>Унисекс</li>
+		<li><input type="checkbox" className="checkbox" id="cb1" onClick={this.props.sort}/><label htmlFor="cb1">Женский</label></li>
+		<li><input type="checkbox" className="checkbox" id="cb2" onClick={this.props.sort}/><label htmlFor="cb2">Мужской</label></li>
+		<li><input type="checkbox" className="checkbox" id="cb3" onClick={this.props.sort}/><label htmlFor="cb3">Унисекс</label></li>
 		</ul>
 		<ul>
 		Цвет
-		<li><input type="checkbox" onClick={this.props.sort}/>Чёрный</li>
-		<li><input type="checkbox" onClick={this.props.sort}/>Белый</li>
-		<li><input type="checkbox" onClick={this.props.sort}/>Синий</li>
+		<li><input type="checkbox" className="checkbox" id="cb4" onClick={this.props.sort}/><label htmlFor="cb4">Чёрный</label></li>
+		<li><input type="checkbox" className="checkbox" id="cb5" onClick={this.props.sort}/><label htmlFor="cb5">Белый</label></li>
+		<li><input type="checkbox" className="checkbox" id="cb6" onClick={this.props.sort}/><label htmlFor="cb6">Синий</label></li>
 		</ul>
 		<ul>
 		Бренд
-		<li><input type="checkbox" onClick={this.props.sort}/>Nike</li>
-		<li><input type="checkbox" onClick={this.props.sort}/>Adidas</li>
-		<li><input type="checkbox" onClick={this.props.sort}/>Yezzy</li>
+		<li><input type="checkbox" className="checkbox" id="cb7" onClick={this.props.sort}/><label htmlFor="cb7">Nike</label></li>
+		<li><input type="checkbox" className="checkbox" id="cb8" onClick={this.props.sort}/><label htmlFor="cb8">Adidas</label></li>
+		<li><input type="checkbox" className="checkbox" id="cb9" onClick={this.props.sort}/><label htmlFor="cb9">Yezzy</label></li>
 		</ul>
 		</aside>
 	}

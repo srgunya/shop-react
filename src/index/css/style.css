@@ -277,7 +277,15 @@ footer {
     footer .one_footer p {
       font-weight: bold;
       font-size: 1.2vw;
-      line-height: 1.8vw; }
+      margin-bottom: 0.5vw; }
+    footer .one_footer #tuta {
+      color: #fff !important;
+      text-decoration: none !important;
+      cursor: none !important; }
+      footer .one_footer #tuta a {
+        color: #fff !important;
+        text-decoration: none !important;
+        cursor: text !important; }
     footer .one_footer .social {
       margin-left: 15vw; }
       footer .one_footer .social li {

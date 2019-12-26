@@ -39,9 +39,13 @@
 			}
 		}
 		.sort_button_right{
+			span{
+				margin: 0 0.5vw 0 0;
+			}
 			button{
 				width: auto;
 				padding: 0 0.5vw;
+				margin: 0 0 0 0.5vw;
 			}
 		}
 	}

@@ -1,13 +1,49 @@
 .menuSort{
-	width: 45%;
+	width: 15%;
 	font-size: 1vw;
 	li{
 		display: flex;
-		margin: 0.5vw 0;
+		margin: 1vw 0;
 	}
-	input{
-		width: 1.5vw;
-		height: 1.5vw;
-		margin-right: 1vw;
+	.checkbox {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	margin: 1vw 0 0 1vw;
+	}
+	.checkbox + label {
+	position: relative;
+	padding: 0 0 0 5vw;
+	cursor: pointer;
+	}
+	.checkbox + label:before {
+	content: '';
+	position: absolute;
+	top: -0.25vw;
+	left: 0;
+	width: 3.5vw;
+	height: 1.7vw;
+	border-radius: 1vw;
+	background: #CDD1DA;
+	box-shadow: inset 0 0.1vw 0.2vw rgba(0,0,0,.2);
+	transition: .1s;
+	}
+	.checkbox + label:after {
+	content: '';
+	position: absolute;
+	top: -0.14vw;
+	left: 0.1vw;
+	width: 1.5vw;
+	height: 1.45vw;
+	border-radius: 1vw;
+	background: #FFF;
+	box-shadow: 0 0.1vw 0.3vw rgba(0,0,0,.3);
+	transition: .1s;
+	}
+	.checkbox:checked + label:before {
+	background: #5e6364;
+	}
+	.checkbox:checked + label:after {
+	left: 1.9vw;
 	}
 }

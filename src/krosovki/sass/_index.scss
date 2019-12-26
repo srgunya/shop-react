@@ -22,4 +22,7 @@ body{
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
+	.item_list{
+		width: 85%;
+	}
 }

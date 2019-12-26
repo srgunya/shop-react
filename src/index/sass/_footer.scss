@@ -17,7 +17,17 @@ footer{
 		p{
 			font-weight: bold;
 			font-size: 1.2vw;
-			line-height: 1.8vw;
+			margin-bottom: 0.5vw;
+		}
+		#tuta{
+			color: #fff!important;
+			text-decoration: none!important;
+			cursor: none!important;
+			a{
+			color: #fff!important;
+			text-decoration: none!important;
+			cursor: text!important;
+			}
 		}
 		.social{
 			margin-left: 15vw;
