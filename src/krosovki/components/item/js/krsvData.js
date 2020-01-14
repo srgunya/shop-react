@@ -8,9 +8,6 @@ let krsvData = [
 	{id : 7, src : "../src/krosovki/components/item/img/white.jpg", brand : "Nike", color : "Белый", sex : "Женский", price : 5000},
 	{id : 8, src : "../src/krosovki/components/item/img/black.jpg", brand : "Nike", color : "Чёрный", sex : "Мужской", price : 1000},
 	{id : 9, src : "../src/krosovki/components/item/img/blue.jpg", brand : "Adidas", color : "Синий", sex : "Унисекс", price : 1000},
-	
-	
-	
 ];
 
 export default krsvData;

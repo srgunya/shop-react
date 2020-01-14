@@ -8,6 +8,7 @@ import maxData from './components/slider/long slider/js/maxData';
 import shortData from './components/slider/short slider/js/shortData';
 import newsData from './components/slider/long slider/js/newsData';
 import brandData from './components/slider/long slider/js/brandData';
+import krsvData from '../krosovki/components/item/js/krsvData';
 
 let el  = document.createElement('div');
 el.id = 'app';
@@ -28,4 +29,5 @@ ReactDOM.render(<App
 				maxText={maxText} 
 				newsText={newsText} 
 				brandData={brandData}
+				krsvData={krsvData}
 				/>, el);

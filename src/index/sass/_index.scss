@@ -23,6 +23,9 @@ body{
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
+	div{
+		flex: 1;
+	}
 }
 .shadow{
 	position: absolute;

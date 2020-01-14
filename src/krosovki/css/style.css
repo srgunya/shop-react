@@ -337,7 +337,10 @@ footer {
   .item img {
     width: 20vw; }
   .item h1 {
+    font-size: 1vw; }
+  .item p {
     font-size: 1vw;
-    margin-bottom: 1vw; }
+    margin-bottom: 1vw;
+    line-height: 1.5vw; }
 
 /*# sourceMappingURL=style.css.map */

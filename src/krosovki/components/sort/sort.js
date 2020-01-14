@@ -33,7 +33,7 @@ export default class Sort extends Component{
 			<button className={this.state.rightTwo} onClick={function(){
 				tuta.props.sortPriceBig();
 				tuta.setState({rightOne : "", rightTwo : "fcs", rightThree : "",});
-			}}>возврастанию цен</button>
+			}}>возрастанию цен</button>
 			<button className={this.state.rightThree} onClick={function(){
 				tuta.props.sortPriceSmall();
 				tuta.setState({rightOne : "", rightTwo : "", rightThree : "fcs",})

@@ -23,6 +23,8 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between; }
+  .three_row div {
+    flex: 1; }
 
 .shadow {
   position: absolute;
@@ -245,7 +247,6 @@ header {
     color: black; }
 
 .news, .brand {
-  width: 33%;
   height: 38vw; }
   .news img, .brand img {
     height: 38vw; }
@@ -397,5 +398,49 @@ footer {
         color: #fff; }
     footer .three_footer span {
       margin-left: 1vw; }
+
+.list {
+  border: 0.01vw solid #dddcdc;
+  margin: 0 1vw;
+  height: 38vw;
+  position: relative; }
+  .list .list_mid {
+    border-top: 0.01vw solid #dddcdc;
+    border-bottom: 0.01vw solid #dddcdc; }
+  .list .list_top {
+    margin-top: 3vw; }
+  .list .textBlock {
+    position: absolute;
+    top: 1.5vw;
+    left: 0.6vw;
+    z-index: 1;
+    color: #fff;
+    background-color: rgba(62, 78, 97, 0.64);
+    border-radius: 0.15vw;
+    padding: 0 2vw;
+    height: 2vw;
+    line-height: 2vw;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8vw;
+    letter-spacing: 0.1vw; }
+    .list .textBlock:hover {
+      background-color: rgba(62, 78, 97, 0.7); }
+  .list div {
+    height: 30%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    cursor: pointer; }
+    .list div img {
+      width: 11vw;
+      float: left;
+      margin-left: 0.6vw; }
+    .list div h1 {
+      margin-left: 2vw;
+      margin-top: 5vw;
+      font-size: 1.1vw; }
 
 /*# sourceMappingURL=style.css.map */
