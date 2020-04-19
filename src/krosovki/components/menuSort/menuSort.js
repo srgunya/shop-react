@@ -14,7 +14,7 @@ export default class MenuSort extends Component{
 	}
 	
 	render(){
-	return <aside className="menuSort">
+	return <div className="menuSort">
 		<ul>
 		Пол
 		<li><input type="checkbox" className="checkbox" id="cb1" onClick={this.props.sort}/><label htmlFor="cb1">Женский</label></li>
@@ -33,6 +33,6 @@ export default class MenuSort extends Component{
 		<li><input type="checkbox" className="checkbox" id="cb8" onClick={this.props.sort}/><label htmlFor="cb8">Adidas</label></li>
 		<li><input type="checkbox" className="checkbox" id="cb9" onClick={this.props.sort}/><label htmlFor="cb9">Yezzy</label></li>
 		</ul>
-		</aside>
+		</div>
 	}
 }

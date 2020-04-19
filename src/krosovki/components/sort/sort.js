@@ -15,7 +15,7 @@ export default class Sort extends Component{
 	
 	render(){
 		let tuta = this;
-	return <aside className="sort">
+	return <div className="sort">
 		<h1>Кроссовки</h1>
 		<div className="sort_button">
 			<div className="sort_button_left">
@@ -41,6 +41,6 @@ export default class Sort extends Component{
 			</div>
 		</div>
 		
-		</aside>
+		</div>
 	}
 }

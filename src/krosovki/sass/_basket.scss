@@ -1,0 +1,24 @@
+.basket{
+	font-size: 1.1vw;
+	position: fixed;
+	width: 25vw;
+	right: 14.7vw;
+	top: 5vw;
+	border: 0.01vw solid #dddcdc;
+	background: #f2f2f2;
+	.basket_item{
+		border: 0.01vw solid #dddcdc;
+		padding-top: 2vw;
+		position: relative;
+		img{
+			width: 10vw;
+			margin-left: 10px;
+		}
+		span{
+			margin-right: 1vw;
+		}
+	}
+}
+.display0{
+	display: none;
+}

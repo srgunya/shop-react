@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   font-family: Arial;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 body {
   background: #f2f2f2;
@@ -342,5 +343,26 @@ footer {
     font-size: 1vw;
     margin-bottom: 1vw;
     line-height: 1.5vw; }
+
+.basket {
+  font-size: 1.1vw;
+  position: fixed;
+  width: 25vw;
+  right: 14.7vw;
+  top: 5vw;
+  border: 0.01vw solid #dddcdc;
+  background: #f2f2f2; }
+  .basket .basket_item {
+    border: 0.01vw solid #dddcdc;
+    padding-top: 2vw;
+    position: relative; }
+    .basket .basket_item img {
+      width: 10vw;
+      margin-left: 10px; }
+    .basket .basket_item span {
+      margin-right: 1vw; }
+
+.display0 {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
