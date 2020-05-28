@@ -10,7 +10,7 @@ export default class Header extends Component{
 	return <header>
 		<a href="./index.html" className="logo"><img src="../src/index/components/header/img/logo.svg" alt="logo"/></a>
 		<nav>
-			<ul onMouseEnter={this.hover}  tabindex="0" onClick={this.props.basketClassNone} >
+			<ul onMouseEnter={this.hover}  tabIndex="0" onClick={this.props.basketClassNone} >
 				<li> 
 					<a href="#" onClick={function(){event.preventDefault()}}>Новинки</a> 
 				</li>
@@ -236,9 +236,9 @@ export default class Header extends Component{
 						</ul>
 		</nav>
 		<div className="icon">
-			<img src="../src/index/components/header/img/bag.svg" alt="" tabindex="0" onFocus={this.props.basketClass}/>
-			<img src="../src/index/components/header/img/search.svg" alt="" tabindex="0" onClick={this.props.basketClassNone} />
-			<img src="../src/index/components/header/img/profile.svg" alt="" tabindex="0" onClick={this.props.basketClassNone} />
+			<img src="../src/index/components/header/img/bag.svg" alt="" tabIndex="0" onFocus={this.props.basketClass}/>
+			<img src="../src/index/components/header/img/search.svg" alt="" tabIndex="0" onClick={this.props.basketClassNone} />
+			<img src="../src/index/components/header/img/profile.svg" alt="" tabIndex="0" onClick={this.props.basketClassNone} />
 		</div>
 		</header>
 	}

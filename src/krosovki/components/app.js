@@ -276,19 +276,17 @@ export default class App extends React.Component{
 		items={items} 
 		itemsList={this.state.itemsOpen}
 		removeBasket = {this.removeBasket}
-		basket={this.state.basket}
-		basketClassNone={this.basketClassNone}
 		/>
-		<div tabindex="0" onClick={this.basketClassNone}>
+		<div tabIndex="0" onClick={this.basketClassNone}>
 			<Sort sortPriceBig={this.sortPriceBig} sortPriceSmall={this.sortPriceSmall} sortPriceNormal={this.sortPriceNormal}/>			  
 		</div>
-			<div className="cont" tabindex="0" onClick={this.basketClassNone}>
+			<div className="cont" tabIndex="0" onClick={this.basketClassNone}>
 				<MenuSort sort={this.sort}/>
 				<div className="item_list">
 				{this.state.itemsExit}
 				</div>
 			</div>
-		<div tabindex="0" onClick={this.basketClassNone}>
+		<div tabIndex="0" onClick={this.basketClassNone}>
 			<Footer/>		  
 		</div>
 		

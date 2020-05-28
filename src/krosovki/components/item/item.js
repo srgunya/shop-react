@@ -22,7 +22,7 @@ export default class Item extends Component{
 		<h1>{this.props.brand}</h1>
 		<p>Цена: {this.props.price}<br/>
 			Пол: {this.props.sex} <br/>
-				<button onClick={this.handleAddBasket}>добавить</button>
+				<button onClick={this.handleAddBasket}>Добавить</button>
 		</p>
 		</div>
 	}

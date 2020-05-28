@@ -1,21 +1,84 @@
 .basket{
 	font-size: 1.1vw;
 	position: fixed;
-	width: 25vw;
+	width: 30vw;
 	right: 14.7vw;
 	top: 5vw;
 	border: 0.01vw solid #dddcdc;
-	background: #f2f2f2;
+	border-top: 0;
+	background: #fff;
+	box-shadow: 0 0 30px rgba(0,0,0,.3);
 	.basket_item{
-		border: 0.01vw solid #dddcdc;
-		padding-top: 2vw;
+		border: 0.0011vw solid #dddcdc;
 		position: relative;
+		height: 6.2vw;
+		.ex{
+			position: absolute;
+			right: 0.5vw;
+			top:  0.5vw;
+			cursor: pointer;
+		.left_ex{
+			transform: rotate(45deg);
+			margin-top: 0.3vw;
+		}
+		.right_ex{
+			transform: rotate(-45deg);
+		}
+		.left_ex, .right_ex{
+			width: 0.7vw;
+			height: 0.01vw;
+			background: black;
+		}
+		}
+		.item_brand{
+			position: absolute;
+			color: rgba(0,0,0,.4);
+			left: 10.5vw;
+			top: 0.3vw;
+			font-size: 1.1vw;
+			width: 17vw;
+		}
+		.item_quantity{
+			color: rgba(0,0,0,.4);
+			position: absolute;
+			left: 10.5vw;
+			bottom: 0.3vw;
+			span{
+				cursor: pointer;
+			}
+		}
+		.item_price{
+			position: absolute;
+			bottom: 0.3vw;
+			right: 0.5vw;
+			margin: 0;
+		}
 		img{
 			width: 10vw;
-			margin-left: 10px;
 		}
-		span{
-			margin-right: 1vw;
+	}
+}
+.total{
+	height: 5vw;
+	.summa{
+	margin-top: 1vw;
+	text-align: right;
+	float: right;
+	margin-right: 0.5vw;
+	width: 8vw;
+	}
+	button{
+		background: black;
+		color: #fff;
+		border: 0;
+		height: 2.5vw;
+		padding: 0 2vw;
+		font-size: 1vw;
+		margin-left: 0.5vw;
+		margin-top: 1.2vw;
+		cursor: pointer;
+		&:hover{
+			opacity: 0.8;
 		}
 	}
 }
