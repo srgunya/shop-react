@@ -274,7 +274,7 @@ export default class App extends React.Component{
 		<Basket
 		basket={this.state.basket}
 		items={items} 
-		itemsList={this.state.itemsOpen}
+		itemsList={this.props.data}
 		removeBasket = {this.removeBasket}
 		/>
 		<div tabIndex="0" onClick={this.basketClassNone}>
