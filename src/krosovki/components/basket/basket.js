@@ -12,6 +12,7 @@ export default class Basket extends Component{
 		
       let items = this.props.items;
       let renderItems = [];
+		let renderTotal = [];
 	  let summa = 0;
 		for(let i in items){
 			let item;
@@ -39,14 +40,25 @@ export default class Basket extends Component{
 			</div>
 			)
 		}
-			renderItems.push(
-			<div key='x2' className="total">
-				<button>Оформление заказа</button>
-				<span className="summa">Сумма заказа {summa} ₽</span>
-			</div>
+		if(renderItems.length == 0){
+			renderTotal.push(
+				<div key="x1" className="totalNone">Ваша корзина пуста :(</div>
 			)
+		} else {
+			renderTotal.push(
+			<div key='x2' className="total">
+			<button>Оформление заказа</button>
+			<span className="summa">Сумма заказа {summa} ₽</span>
+			</div>
+		)
+		}
+		
+
 	return <div className={this.props.basket}>
+		<div className="basket_list">
 		{renderItems}
+		</div>
+		{renderTotal}
 		</div>
 	}
 }

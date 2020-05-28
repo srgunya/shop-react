@@ -25,7 +25,8 @@ export default class App extends React.Component{
 											/>),
 			index : "normal",
 			num : 0,
-			basket : "display0"
+			basket : "display0",
+			list : "item_list  nine",
 		}
 		this.hover = this.hover.bind(this);
 		this.hide = this.hide.bind(this);
@@ -37,6 +38,17 @@ export default class App extends React.Component{
 		this.removeBasket = this.removeBasket.bind(this);
 		this.basketClass = this.basketClass.bind(this);
 		this.basketClassNone = this.basketClassNone.bind(this);
+		this.ListClass = this.ListClass.bind(this);
+	}
+		
+	ListClass(a){
+		if(a == 9){
+			this.setState({list : "item_list nine"});	
+		} else if (a == 18){
+			this.setState({list : "item_list eighteen"});	
+		} else if(a == 27){
+			this.setState({list : "item_list twentyseven"});	
+		}
 	}
 			
 	hover(){
@@ -270,26 +282,30 @@ export default class App extends React.Component{
 	render(){
 				return <div>
 		<Header hover={this.hover} hide={this.hide} basketClass={this.basketClass} basketClassNone={this.basketClassNone} />
+					  
 		<div className={this.state.class}></div>
+					  
 		<Basket
 		basket={this.state.basket}
 		items={items} 
 		itemsList={this.props.data}
 		removeBasket = {this.removeBasket}
 		/>
+					  
 		<div tabIndex="0" onClick={this.basketClassNone}>
-			<Sort sortPriceBig={this.sortPriceBig} sortPriceSmall={this.sortPriceSmall} sortPriceNormal={this.sortPriceNormal}/>			  
+			<Sort sortPriceBig={this.sortPriceBig} sortPriceSmall={this.sortPriceSmall} sortPriceNormal={this.sortPriceNormal} ListClass={this.ListClass}/>			  
 		</div>
-			<div className="cont" tabIndex="0" onClick={this.basketClassNone}>
-				<MenuSort sort={this.sort}/>
-				<div className="item_list">
-				{this.state.itemsExit}
-				</div>
+					  
+		<div className="cont" tabIndex="0" onClick={this.basketClassNone}>
+			<MenuSort sort={this.sort}/>
+			<div className={this.state.list}>
+			{this.state.itemsExit}
 			</div>
+		</div>
+					  
 		<div tabIndex="0" onClick={this.basketClassNone}>
 			<Footer/>		  
 		</div>
-		
 		</div>
 	}
 }

@@ -236,8 +236,8 @@ export default class Header extends Component{
 						</ul>
 		</nav>
 		<div className="icon">
-			<img src="../src/index/components/header/img/bag.svg" alt="" tabIndex="0" onFocus={this.props.basketClass}/>
 			<img src="../src/index/components/header/img/search.svg" alt="" tabIndex="0" onClick={this.props.basketClassNone} />
+			<img src="../src/index/components/header/img/bag.svg" alt="" tabIndex="0" onFocus={this.props.basketClass}/>
 			<img src="../src/index/components/header/img/profile.svg" alt="" tabIndex="0" onClick={this.props.basketClassNone} />
 		</div>
 		</header>

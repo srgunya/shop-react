@@ -25,5 +25,17 @@ body{
 	justify-content: space-between;
 	.item_list{
 		width: 85%;
+		overflow: hidden;
+		padding-top: 1vw;
+		padding-left: 1vw;
+	}
+	.nine{
+		max-height: 87vw;
+	}
+	.eighteen{
+		max-height: 87*2vw;
+	}
+	.twentyseven{
+		max-height: 87*3vw;
 	}
 }

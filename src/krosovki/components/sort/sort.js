@@ -20,9 +20,22 @@ export default class Sort extends Component{
 		<div className="sort_button">
 			<div className="sort_button_left">
 			<span>Показать</span>
-			<button className={this.state.leftOne} onClick={()=>this.setState({leftOne : "fcs", leftTwo : "", leftThree : "",})}>60</button>
-			<button className={this.state.leftTwo} onClick={()=>this.setState({leftOne : "", leftTwo : "fcs", leftThree : "",})}>120</button>
-			<button className={this.state.leftThree} onClick={()=>this.setState({leftOne : "", leftTwo : "", leftThree : "fcs",})}>240</button>
+		
+			<button className={this.state.leftOne} onClick={function(){
+				tuta.props.ListClass(9)
+				tuta.setState({leftOne : "fcs", leftTwo : "", leftThree : "",});
+			}}>9</button>
+
+			<button className={this.state.leftTwo} onClick={function(){
+				tuta.props.ListClass(18)
+				tuta.setState({leftOne : "", leftTwo : "fcs", leftThree : "",})
+			}}>18</button>
+
+			<button className={this.state.leftThree} onClick={function(){
+				tuta.props.ListClass(27)
+				tuta.setState({leftOne : "", leftTwo : "", leftThree : "fcs",})
+			}}>27</button>
+
 			</div>
 			<div className="sort_button_right">
 			<span>Сортировать</span>

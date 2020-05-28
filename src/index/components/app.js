@@ -5,6 +5,7 @@ import ShortSlider from './slider/short slider/short_slider';
 import Footer from './footer/footer';
 import List from './list/list';
 
+
 export default class App extends React.Component{
 	constructor(props){
 		super(props);
@@ -27,14 +28,18 @@ export default class App extends React.Component{
 	render(){
 				return <div>
 		<Header hover={this.hover} hide={this.hide}/>
+			
 		<div className={this.state.class}></div>
+			
 		<div className="one_row">
 			<LongSlider data={this.props.minData} className="carousel min" title="Актуальные категории" text={this.props.minText}/>
 			<LongSlider data={this.props.maxData} className="carousel max" title="Новые поступления" text={this.props.maxText}/>
 		</div>
+		
 		<div className="two_row">
 			<ShortSlider data={this.props.shortData} />
 		</div>
+		
 		<div className="three_row">
 			<LongSlider data={this.props.newsData} className="carousel news" title="Новости" text={this.props.newsText}/>
 				<List krsvData={this.props.krsvData}/>

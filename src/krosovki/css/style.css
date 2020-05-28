@@ -24,7 +24,16 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between; }
   .cont .item_list {
-    width: 85%; }
+    width: 85%;
+    overflow: hidden;
+    padding-top: 1vw;
+    padding-left: 1vw; }
+  .cont .nine {
+    max-height: 87vw; }
+  .cont .eighteen {
+    max-height: 174vw; }
+  .cont .twentyseven {
+    max-height: 261vw; }
 
 header {
   width: 100%;
@@ -283,6 +292,8 @@ footer {
       width: auto;
       padding: 0 0.5vw;
       margin: 0 0 0 0.5vw; }
+    .sort .sort_button .sort_button_left button {
+      width: 2vw; }
 
 .menuSort {
   width: 15%;
@@ -329,7 +340,7 @@ footer {
 .item {
   text-align: center;
   display: inline-block;
-  width: 24vw;
+  width: 23.6vw;
   margin-bottom: 2vw;
   cursor: pointer; }
   .item:hover {
@@ -352,24 +363,29 @@ footer {
   font-size: 1.1vw;
   position: fixed;
   width: 30vw;
-  right: 14.7vw;
+  right: 10.2vw;
   top: 5vw;
   border: 0.01vw solid #dddcdc;
   border-top: 0;
   background: #fff;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 10000; }
+  .basket .basket_list {
+    max-height: 25vw;
+    overflow: auto; }
   .basket .basket_item {
     border: 0.0011vw solid #dddcdc;
+    border-top: 0;
     position: relative;
-    height: 6.2vw; }
+    height: 7.5vw; }
     .basket .basket_item .ex {
       position: absolute;
       right: 0.5vw;
-      top: 0.5vw;
+      top: 0.3vw;
       cursor: pointer; }
       .basket .basket_item .ex .left_ex {
         transform: rotate(45deg);
-        margin-top: 0.3vw; }
+        margin-top: 0.6vw; }
       .basket .basket_item .ex .right_ex {
         transform: rotate(-45deg); }
       .basket .basket_item .ex .left_ex, .basket .basket_item .ex .right_ex {
@@ -382,7 +398,7 @@ footer {
       left: 10.5vw;
       top: 0.3vw;
       font-size: 1.1vw;
-      width: 17vw; }
+      margin-right: 3vw; }
     .basket .basket_item .item_quantity {
       color: rgba(0, 0, 0, 0.4);
       position: absolute;
@@ -396,7 +412,12 @@ footer {
       right: 0.5vw;
       margin: 0; }
     .basket .basket_item img {
-      width: 10vw; }
+      width: 10.2vw;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      top: 0;
+      bottom: 0; }
 
 .total {
   height: 5vw; }
@@ -419,7 +440,31 @@ footer {
     .total button:hover {
       opacity: 0.8; }
 
+.totalNone {
+  height: 3vw;
+  line-height: 3vw;
+  text-align: center; }
+
 .display0 {
   display: none; }
+
+.basket ::-webkit-scrollbar-button {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0px; }
+.basket ::-webkit-scrollbar-track {
+  background-color: #ecedee; }
+.basket ::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background-color: black; }
+.basket ::-webkit-resizer {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 4px;
+  height: 0px; }
+.basket ::-webkit-scrollbar {
+  width: 0.15vw; }
 
 /*# sourceMappingURL=style.css.map */
